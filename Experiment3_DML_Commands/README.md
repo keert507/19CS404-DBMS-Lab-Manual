@@ -47,123 +47,175 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+<img width="1196" height="185" alt="image" src="https://github.com/user-attachments/assets/50b0aa00-1b16-42a8-a0c7-ea34728166e7" />
 
 ```sql
--- Paste your SQL code below for Question 1
+DELETE FROM Doctors
+WHERE specialization = 'Pediatrics'
+AND first_name = 'Michael';
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1342" height="458" alt="image" src="https://github.com/user-attachments/assets/57c9665d-92bb-445b-a62a-7e8375f72003" />
 
 **Question 2**
 ---
--- Paste Question 2 here
+<img width="930" height="604" alt="image" src="https://github.com/user-attachments/assets/00a01e47-0674-4823-842f-a81c8b85f960" />
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT id, value1, ABS(value1) AS absolute_value
+FROM Calculations;
+
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1059" height="376" alt="image" src="https://github.com/user-attachments/assets/cbd441bd-da70-490a-8981-7a724b438b0b" />
 
 **Question 3**
 ---
--- Paste Question 3 here
+<img width="1380" height="651" alt="image" src="https://github.com/user-attachments/assets/fcecd808-bf32-4efa-a1d1-0bc3d83afa05" />
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT 
+    product_id,
+    original_price,
+    discount_percentage,
+    original_price - (original_price * discount_percentage) AS discounted_price
+FROM Products
+WHERE (original_price - (original_price * discount_percentage)) > 100;
+
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1452" height="365" alt="image" src="https://github.com/user-attachments/assets/b2e71a34-ac38-40bb-9886-4b0b82249744" />
 
 **Question 4**
 ---
--- Paste Question 4 here
+<img width="1043" height="708" alt="image" src="https://github.com/user-attachments/assets/0e4867d1-8860-4f50-a83d-15bd9444f798" />
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT 
+    ename,
+    hiredate,
+    CASE strftime('%w', hiredate)
+        WHEN '0' THEN 'Sunday'
+        WHEN '1' THEN 'Monday'
+        WHEN '2' THEN 'Tuesday'
+        WHEN '3' THEN 'Wednesday'
+        WHEN '4' THEN 'Thursday'
+        WHEN '5' THEN 'Friday'
+        WHEN '6' THEN 'Saturday'
+    END AS day_of_week
+FROM emp;
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="854" height="460" alt="image" src="https://github.com/user-attachments/assets/cf8c2b80-1776-4bf6-80d5-c2f1d58d8682" />
 
 **Question 5**
 ---
--- Paste Question 5 here
+<img width="951" height="673" alt="image" src="https://github.com/user-attachments/assets/684a2f69-3bea-47e3-8936-c8afffd07cfc" />
 
 ```sql
--- Paste your SQL code below for Question 5
+UPDATE Employees
+SET hire_date = '2024-01-24'
+WHERE department_id = 50;
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1392" height="343" alt="image" src="https://github.com/user-attachments/assets/52fa930b-5103-4bd9-a1c8-b2a5e4c86cdd" />
 
 **Question 6**
 ---
--- Paste Question 6 here
+<img width="1445" height="607" alt="image" src="https://github.com/user-attachments/assets/d7351c3e-b28b-422a-8dca-04ab1997db75" />
 
 ```sql
--- Paste your SQL code below for Question 6
+UPDATE purchases
+SET 
+    per_unit_price = 25,
+    total_price = quantity * 25
+WHERE purchase_date = '2022-08-15'
+AND product_id = 12;
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1676" height="382" alt="image" src="https://github.com/user-attachments/assets/a559f798-16fd-42b8-b434-9a59931277f1" />
 
 **Question 7**
 ---
--- Paste Question 7 here
+<img width="1508" height="579" alt="image" src="https://github.com/user-attachments/assets/ebe79ffa-be89-4f9d-9c2a-86639de52d3c" />
 
 ```sql
--- Paste your SQL code below for Question 7
+
+DELETE FROM customer
+WHERE OPENING_AMT BETWEEN 4000 AND 6000;
+
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1874" height="393" alt="image" src="https://github.com/user-attachments/assets/e2f6174b-2808-4cea-bc1c-bde44abdbaa3" />
 
 **Question 8**
 ---
--- Paste Question 8 here
+<img width="926" height="430" alt="image" src="https://github.com/user-attachments/assets/d01928a4-bf45-4427-96ad-ae56d93c380a" />
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT 
+    strftime('%Y', hiredate) AS Year,
+    strftime('%m', hiredate) AS Month,
+    strftime('%d', hiredate) AS Day
+FROM emp;
+
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="978" height="516" alt="image" src="https://github.com/user-attachments/assets/56cc16f2-6392-4d2c-b73f-d81a14c992b7" />
 
 **Question 9**
 ---
--- Paste Question 9 here
+<img width="1755" height="589" alt="image" src="https://github.com/user-attachments/assets/cbfcb37e-4f32-4988-8baf-4ed02be66f4f" />
 
 ```sql
--- Paste your SQL code below for Question 9
+
+DELETE FROM Customer
+WHERE CUST_COUNTRY NOT IN ('UK', 'USA', 'Canada')
+AND GRADE >= 3;
+
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1888" height="295" alt="image" src="https://github.com/user-attachments/assets/14372828-92cc-43ce-8f46-99a6354082d6" />
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="1821" height="692" alt="image" src="https://github.com/user-attachments/assets/25376624-1959-4632-8d03-4d3ea60f4b21" />
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT
+    product_id,
+    original_price,
+    discount_percentage,
+    original_price - (original_price * discount_percentage) AS discounted_price
+FROM Products
+WHERE original_price BETWEEN 50 AND 150;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1572" height="381" alt="image" src="https://github.com/user-attachments/assets/d05e839d-584c-41c0-b51e-62f7430234d2" />
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
