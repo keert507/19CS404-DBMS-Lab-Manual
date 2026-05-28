@@ -106,122 +106,190 @@ CREATE TABLE Table_Name (
 **Question 1**
 --
 -- Paste Question 1 here
+<img width="784" height="164" alt="image" src="https://github.com/user-attachments/assets/6c162279-7307-427c-a4dd-7c59cce09390" />
+
 
 ```sql
--- Paste your SQL code below for Question 1
+
+create table Attendance(
+ AttendanceID INTEGER PRIMARY KEY,
+ EmployeeID INTEGER,
+ AttendanceDate DATE,
+ Status TEXT check(Status in ('Present','Absent','Leave')),
+ foreign key(EmployeeID) references employees(EmployeeID));
+ 
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1725" height="272" alt="image" src="https://github.com/user-attachments/assets/e73e33ed-16c6-417f-8310-2e1a2b807437" />
 
 **Question 2**
 ---
--- Paste Question 2 here
+<img width="1448" height="361" alt="image" src="https://github.com/user-attachments/assets/7eef9d16-7a9b-4564-aa9f-1b8d6e916d17" />
 
 ```sql
--- Paste your SQL code below for Question 2
+
+create table Department (
+DepartmentID INTEGER primary key,
+DepartmentName TEXT UNIQUE not null,
+Location TEXT);
+
+
+
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="1839" height="265" alt="image" src="https://github.com/user-attachments/assets/c7356540-ab3e-42a6-8df2-a1be5498bfe7" />
 
 **Question 3**
 ---
--- Paste Question 3 here
+<img width="854" height="193" alt="image" src="https://github.com/user-attachments/assets/aeec70af-61a1-4496-be37-1706b8fc2e04" />
 
 ```sql
--- Paste your SQL code below for Question 3
+
+insert into Employee(EmployeeID,Name,Position,Department,Salary)
+values(001,'Sarah Parker','Manager','HR',60000);
+
+
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="1838" height="313" alt="image" src="https://github.com/user-attachments/assets/86ddfbaa-8b9a-4050-b054-d9ea331cb1ae" />
 
 **Question 4**
 ---
--- Paste Question 4 here
+<img width="1215" height="660" alt="image" src="https://github.com/user-attachments/assets/a215f33a-feb0-40b7-a5bd-910bdd555de4" />
 
 ```sql
--- Paste your SQL code below for Question 4
+
+alter table Companies
+add designation varchar(50);
+alter table Companies
+add net_salary  number;
+alter table Companies
+add dob date;
+
+
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="1716" height="434" alt="image" src="https://github.com/user-attachments/assets/2b19c8a6-7092-4323-a893-c9cd277e2851" />
 
 **Question 5**
 ---
--- Paste Question 5 here
+<img width="1590" height="365" alt="image" src="https://github.com/user-attachments/assets/f960e948-4b32-4c49-9324-7aef95fe49dc" />
 
 ```sql
--- Paste your SQL code below for Question 5
+
+create table Invoices(
+InvoiceID INTEGER primary key,
+InvoiceDate DATE,
+Amount Real check(Amount>0),
+DueDate DATE check(DueDate>InvoiceDate),
+OrderID INTEGER,
+foreign key(OrderID) references Orders(OrderID))
+
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="1890" height="272" alt="image" src="https://github.com/user-attachments/assets/6a72ce3a-dd6a-4fa3-907c-da467c1a0f61" />
 
 **Question 6**
 ---
--- Paste Question 6 here
+<img width="1398" height="433" alt="image" src="https://github.com/user-attachments/assets/4f46d53c-3027-47cb-bfee-39fce0f56c1b" />
 
 ```sql
--- Paste your SQL code below for Question 6
+
+ALTER TABLE Companies RENAME COLUMN name TO first_name;
+ALTER TABLE Companies ADD COLUMN mobilenumber number;
+ALTER TABLE Companies ADD COLUMN DOB Date;
+ALTER TABLE Companies ADD COLUMN State varchar(30);
+
+
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="1781" height="474" alt="image" src="https://github.com/user-attachments/assets/ca9102d9-49a8-4666-8558-cfbd5b8792f5" />
 
 **Question 7**
 ---
--- Paste Question 7 here
+<img width="1705" height="438" alt="image" src="https://github.com/user-attachments/assets/2ea51568-125b-4b11-92e5-fe00d7d12167" />
 
 ```sql
--- Paste your SQL code below for Question 7
+
+INSERT INTO Books (ISBN, Title, Author, Publisher, Year)
+VALUES ('978-1234567890', 'Introduction to AI', 'John Doe', NULL, NULL);
+
+INSERT INTO Books (ISBN, Title, Author, Publisher, Year)
+VALUES ('978-9876543210', 'Deep Learning', 'Jane Doe', 'TechPress', 2022);
+
+INSERT INTO Books (ISBN, Title, Author, Publisher, Year)
+VALUES ('978-1122334455', 'Cybersecurity Essentials', 'Alice Smith', NULL, 2021);
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="1686" height="309" alt="image" src="https://github.com/user-attachments/assets/73e3ade0-539a-437f-9a05-3bf88d053bf6" />
 
 **Question 8**
 ---
--- Paste Question 8 here
+
+<img width="868" height="348" alt="image" src="https://github.com/user-attachments/assets/ce0dcdb1-cdd5-44b2-94e6-476679fdd364" />
 
 ```sql
--- Paste your SQL code below for Question 8
+CREATE TABLE Orders (
+    OrderID INTEGER,
+    OrderDate TEXT,
+    CustomerID INTEGER
+);
+
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="1620" height="374" alt="image" src="https://github.com/user-attachments/assets/5000f5d5-b74c-4d8c-8d35-f62c5049c54e" />
 
 **Question 9**
 ---
--- Paste Question 9 here
+<img width="1035" height="209" alt="image" src="https://github.com/user-attachments/assets/6a383ca3-a0ac-4d7e-a723-918384d3d8dc" />
 
 ```sql
--- Paste your SQL code below for Question 9
+INSERT INTO Products (ProductID, Name, Category, Price, Stock)
+VALUES (101, 'Laptop', 'Electronics', 1500, 50);
+
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="1479" height="282" alt="image" src="https://github.com/user-attachments/assets/dedf3276-8a73-4bd9-bf7b-e86149de8849" />
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="1790" height="400" alt="image" src="https://github.com/user-attachments/assets/b1257c26-e45d-4d51-b769-7e5b272584eb" />
 
 ```sql
--- Paste your SQL code below for Question 10
+CREATE TABLE contacts (
+    contact_id INTEGER PRIMARY KEY,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    email TEXT,
+    phone TEXT NOT NULL CHECK(length(phone) >= 10)
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="1880" height="219" alt="image" src="https://github.com/user-attachments/assets/909bbdb1-5f8f-457f-874e-b58f4fbd1475" />
 
 
 ## RESULT
